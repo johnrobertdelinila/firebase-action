@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ChatApp</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.1/css/all.css">
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+	<script>
+		var firebaseConfig = {
+			
+		};
+
+		firebase.initializeApp(firebaseConfig);
+
+	</script>
+
+</head>
+
+<body >
+	<section id="chats" style="background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);">
+		<div class="log">
+			<button onclick="logout()" type="button" class="btn btn-danger logout">
+				<i class="fa fa-sign-out-alt"></i>
+				Log Out</button>
+
+		</div>  
+	
+		<div class="main-comp" >
+			<div class="container" >
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12">
+						<div class="inside text-center">
+							<i style="color: white; font-size: 35px;" class="fas fa-sms pt-3 pb-3">PYTALKSs</i>
+						</div>
+						<div class="inner vertical-scrollable">
+							<div class="area" id='areat'>
+
+							</div> </div>
+							<div class="type text-center pt-2">
+
+								<input type="text" class="typea mx-2" placeholder="Type your text here" id="mess">
+								<button type="button" class="btn btn-primary btm mb-1" onclick="enter()">Send</button>
+							</div>
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/script.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
